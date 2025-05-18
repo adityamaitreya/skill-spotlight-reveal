@@ -39,15 +39,15 @@ const SkillsList: React.FC<SkillsListProps> = ({ skills }) => {
   
   if (skills.length === 0) {
     return (
-      <Card className="mt-6 border-dashed border-2 bg-gray-50">
+      <Card className="mt-6 border-dashed border-2 bg-card">
         <CardHeader className="pb-2">
-          <CardTitle className="text-center text-gray-500 flex items-center justify-center">
+          <CardTitle className="text-center text-muted-foreground flex items-center justify-center">
             <TagIcon className="w-5 h-5 mr-2 opacity-50" />
             No skills detected
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-0 pb-6">
-          <p className="text-center text-gray-400 text-sm">
+          <p className="text-center text-muted-foreground text-sm">
             Upload a resume to extract skills automatically
           </p>
         </CardContent>
@@ -61,10 +61,10 @@ const SkillsList: React.FC<SkillsListProps> = ({ skills }) => {
   );
 
   return (
-    <Card className="mt-6 shadow-md border-gray-200">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-gray-50 border-b pb-4">
+    <Card className="mt-6 shadow-lg border-border">
+      <CardHeader className="bg-card border-b pb-4">
         <CardTitle className="flex items-center">
-          <TagIcon className="w-5 h-5 mr-2 text-blue-600" />
+          <TagIcon className="w-5 h-5 mr-2 text-primary" />
           Detected Skills ({skills.length})
         </CardTitle>
       </CardHeader>
@@ -73,7 +73,7 @@ const SkillsList: React.FC<SkillsListProps> = ({ skills }) => {
           <div className="space-y-6">
             {categories.map(category => (
               <div key={category} className="skill-category">
-                <h3 className="text-sm font-medium text-gray-500 mb-2">{category}</h3>
+                <h3 className="text-sm font-medium text-muted-foreground mb-2">{category}</h3>
                 <div className="flex flex-wrap">
                   {groupedSkills[category].map((skill, index) => (
                     <SkillTag key={index} skill={skill} category={category} />

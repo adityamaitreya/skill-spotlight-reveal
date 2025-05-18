@@ -14,17 +14,17 @@ function getBadgeColor(skill: string, category?: string): string {
   if (category) {
     switch (category.toLowerCase()) {
       case 'programming':
-        return 'bg-blue-500 hover:bg-blue-600 shadow-sm shadow-blue-200';
+        return 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm';
       case 'framework':
-        return 'bg-purple-500 hover:bg-purple-600 shadow-sm shadow-purple-200';
+        return 'bg-purple-600 hover:bg-purple-700 text-white shadow-sm';
       case 'database':
-        return 'bg-green-500 hover:bg-green-600 shadow-sm shadow-green-200';
+        return 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm';
       case 'devops':
-        return 'bg-orange-500 hover:bg-orange-600 shadow-sm shadow-orange-200';
+        return 'bg-amber-600 hover:bg-amber-700 text-white shadow-sm';
       case 'design':
-        return 'bg-pink-500 hover:bg-pink-600 shadow-sm shadow-pink-200';
+        return 'bg-fuchsia-600 hover:bg-fuchsia-700 text-white shadow-sm';
       default:
-        return 'bg-gray-500 hover:bg-gray-600 shadow-sm shadow-gray-200';
+        return 'bg-slate-600 hover:bg-slate-700 text-white shadow-sm';
     }
   }
   
@@ -33,31 +33,31 @@ function getBadgeColor(skill: string, category?: string): string {
   
   // Programming languages
   if (['javascript', 'python', 'java', 'c++', 'c#', 'typescript', 'php', 'ruby', 'swift'].includes(skillLower)) {
-    return 'bg-blue-500 hover:bg-blue-600 shadow-sm shadow-blue-200';
+    return 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm';
   }
   
   // Frameworks and libraries
   if (['react', 'angular', 'vue', 'django', 'flask', 'express', 'spring', 'rails'].includes(skillLower)) {
-    return 'bg-purple-500 hover:bg-purple-600 shadow-sm shadow-purple-200';
+    return 'bg-purple-600 hover:bg-purple-700 text-white shadow-sm';
   }
   
   // Databases
   if (['sql', 'mysql', 'postgresql', 'mongodb', 'firebase', 'oracle', 'redis'].includes(skillLower)) {
-    return 'bg-green-500 hover:bg-green-600 shadow-sm shadow-green-200';
+    return 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm';
   }
   
   // DevOps & Cloud
   if (['aws', 'azure', 'docker', 'kubernetes', 'devops', 'ci/cd', 'git'].includes(skillLower)) {
-    return 'bg-orange-500 hover:bg-orange-600 shadow-sm shadow-orange-200';
+    return 'bg-amber-600 hover:bg-amber-700 text-white shadow-sm';
   }
   
   // Design
   if (['ui', 'ux', 'figma', 'sketch', 'adobe', 'design', 'photoshop'].includes(skillLower)) {
-    return 'bg-pink-500 hover:bg-pink-600 shadow-sm shadow-pink-200';
+    return 'bg-fuchsia-600 hover:bg-fuchsia-700 text-white shadow-sm';
   }
   
   // Default
-  return 'bg-gray-500 hover:bg-gray-600 shadow-sm shadow-gray-200';
+  return 'bg-slate-600 hover:bg-slate-700 text-white shadow-sm';
 }
 
 const SkillTag: React.FC<SkillTagProps> = ({ skill, category }) => {
@@ -66,7 +66,7 @@ const SkillTag: React.FC<SkillTagProps> = ({ skill, category }) => {
   return (
     <Badge 
       className={cn(
-        'px-3 py-1.5 text-white font-medium rounded-full m-1 transition-all duration-200 hover:scale-105',
+        'px-3 py-1.5 font-medium rounded-full m-1 transition-all duration-200 hover:scale-105',
         badgeColor
       )}
     >

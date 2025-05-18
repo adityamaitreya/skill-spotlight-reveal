@@ -7,6 +7,7 @@ import { extractSkills } from '@/lib/skillsExtractor';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from '@/components/ui/card';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const Index = () => {
   const [processing, setProcessing] = useState(false);
@@ -49,11 +50,21 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-gradient-to-r from-brand-700 to-brand-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Resume Skills Extractor</h1>
-          <p className="text-xl max-w-2xl">
+    <div className="min-h-screen bg-background">
+      <header className="bg-primary text-primary-foreground py-12 relative">
+        <div className="absolute top-4 right-4">
+          <ThemeToggle />
+        </div>
+        <div className="container mx-auto px-4 flex flex-col items-center">
+          <div className="flex items-center mb-6">
+            <img 
+              src="/lovable-uploads/d1b8d88c-4284-4d4b-9970-a36e3e23ec5f.png" 
+              alt="HCL Logo" 
+              className="h-12 mr-3" 
+            />
+            <h1 className="text-4xl font-bold">Resume Skills Extractor</h1>
+          </div>
+          <p className="text-xl max-w-2xl text-center">
             Upload your resume and instantly discover the key skills that make you stand out.
             Our tool helps you identify professional competencies from your CV.
           </p>
@@ -88,7 +99,7 @@ const Index = () => {
             </div>
           ) : (
             <>
-              <Card className="mb-6 bg-blue-50 border-blue-100">
+              <Card className="mb-6 bg-primary/5 border-primary/10">
                 <CardContent className="p-6">
                   <h2 className="text-xl font-bold mb-2">How it works</h2>
                   <ol className="list-decimal pl-5 space-y-2">
@@ -109,9 +120,9 @@ const Index = () => {
         </div>
       </main>
       
-      <footer className="bg-gray-100 py-6">
-        <div className="container mx-auto px-4 text-center text-gray-600">
-          <p>© {new Date().getFullYear()} Resume Skills Extractor. All rights reserved.</p>
+      <footer className="bg-muted py-6">
+        <div className="container mx-auto px-4 text-center text-muted-foreground">
+          <p>© {new Date().getFullYear()} Resume Skills Extractor by HCL. All rights reserved.</p>
         </div>
       </footer>
     </div>
