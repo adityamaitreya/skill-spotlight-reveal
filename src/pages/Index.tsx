@@ -55,16 +55,16 @@ const Index = () => {
         <div className="absolute top-4 right-4">
           <ThemeToggle />
         </div>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4">
+        <div className="container mx-auto px-4 relative">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/d1b8d88c-4284-4d4b-9970-a36e3e23ec5f.png" 
               alt="HCL Logo" 
-              className="h-14" 
+              className="h-14 absolute left-0" 
             />
-            <h1 className="text-4xl font-bold">Resume Skills Extractor</h1>
+            <h1 className="text-4xl font-bold w-full text-center">Resume Skills Extractor</h1>
           </div>
-          <p className="text-xl max-w-2xl mx-auto text-center mt-4">
+          <p className="text-xl max-w-2xl mx-auto text-center mt-8">
             Upload your resume and instantly discover the key skills that make you stand out.
             Our tool helps you identify professional competencies from your CV.
           </p>
